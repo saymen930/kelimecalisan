@@ -1,21 +1,27 @@
 {
-  "name": "Crocodile_Bot",
-  "description": "kelime oyunu",
+  "name": "kelimecalisan",
+  "version": "1.0.0",
+  "description": "Kelime Çalışan Uygulaması",
+  "author": "Saymen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saymen930/kelimecalisan.git"
+  },
   "keywords": [
-    "telegram",
-    "best",
-    "group",
-    "manager",
-    "3"
+    "kelime",
+    "çalışma",
+    "uygulaması"
   ],
-  "repository": "https://github.com/Goqerti/sozoyunuisliyen",
-  
-  "addons": [
-    {
-      "plan": "heroku-postgresql",
-      "options": {
-        "version": "10"
-      }
-    }
-  ]
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.3"
+    // Diğer bağımlılıklar buraya eklenebilir
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
 }
