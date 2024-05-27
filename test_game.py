@@ -1,8 +1,5 @@
 from unittest import TestCase
-
-from game import Game
-from game import User
-
+from game import Game, User
 
 class TestGame(TestCase):
     def test_not_master(self):
@@ -17,13 +14,13 @@ class TestGame(TestCase):
         game.start()
         game.set_master(1)
         word = game.get_word(1)
-        self.assertEqual(game._current_word, word)
+        self.assertEqual(game.current_word, word)
 
     def test_answered(self):
         game = Game()
         game.start()
         game.set_master(1)
-        is_answered = game.is_word_answered(2, game._current_word)
+        is_answered = game.is_word_answered(2, game.current_word)
         self.assertTrue(is_answered)
 
     def test_not_answered(self):
@@ -39,3 +36,4 @@ class TestGame(TestCase):
         user = User(1, 'a')
         user.update_rating()
         self.assertEqual(1, user.get_rating())
+        
